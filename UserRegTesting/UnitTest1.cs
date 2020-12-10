@@ -17,5 +17,12 @@ namespace UserRegTesting
             bool result = program.FirstNameVal(name);
             Assert.AreEqual(true, result);
         }
+        [TestMethod]
+        public void LastNameTest()
+        {
+            string name = "Sayyad";
+            bool result = program.LastNameVal(name);
+            Assert.AreEqual(true, result);
+        }
     }
 }
