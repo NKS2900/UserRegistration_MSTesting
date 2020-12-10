@@ -12,11 +12,30 @@ namespace UserRegistration
             Console.Write("Enter First Name : ");
             string first_name = Console.ReadLine();
             Console.WriteLine(p.FirstNameVal(first_name));
+            Console.Write("Enter Last Name : ");
+            string last_name = Console.ReadLine();
+            Console.WriteLine(p.LastNameVal(last_name));
+            Console.Write("Enter E-mail : ");
+            string email = Console.ReadLine();
+            Console.WriteLine(p.EmailValidation(email));
         }
         public bool FirstNameVal(string fname)
         {
             Regex rg = new Regex(REGEX_PATTERN);
             return rg.IsMatch(fname); ;
+        }
+        public bool LastNameVal(string last_name)
+        {
+            Regex rg = new Regex(REGEX_PATTERN);
+            bool validate = rg.IsMatch(last_name);
+            return validate;
+        }
+        public bool EmailValidation(string email)
+        {
+            string EMAIL_PATTERN = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*(\\@)[a-zA-Z0-9]+(\\.)[a-z]{2,3}[.(a-z)]*$";
+            Regex rg = new Regex(EMAIL_PATTERN);
+            bool validate = rg.IsMatch(email);
+            return validate;
         }
     }
 }
