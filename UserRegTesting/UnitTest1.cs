@@ -10,5 +10,12 @@ namespace UserRegTesting
         {
             program = new Program();
         }
+        [TestMethod]
+        public void FirstNameTest()
+        {
+            string name = "Nijam";
+            bool result = program.FirstNameVal(name);
+            Assert.AreEqual(true, result);
+        }
     }
 }

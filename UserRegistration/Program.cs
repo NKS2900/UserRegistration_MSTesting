@@ -9,6 +9,14 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome_To_UserRegistration_RegeEx");
+            Console.Write("Enter First Name : ");
+            string first_name = Console.ReadLine();
+            Console.WriteLine(p.FirstNameVal(first_name));
+        }
+        public bool FirstNameVal(string fname)
+        {
+            Regex rg = new Regex(REGEX_PATTERN);
+            return rg.IsMatch(fname); ;
         }
     }
 }
