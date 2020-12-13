@@ -55,10 +55,17 @@ namespace UserRegTesting
             Assert.AreEqual(true, result);
         }
         [TestMethod]
-        public void Happy_Test()
+        public void HappyTest()
         {
             var Result = reg.MessageCheck("Happy");
-            Assert.AreEqual(true,Result);
+            Assert.AreEqual(true, Result);
+        }
+        [TestMethod]
+        public void MultipleEmailTest()
+        {
+            var Result = reg.CheckMultipleEmail("nks@gmail.com","nks.nks@gmail.com","nks234@gmail.com");
+            string check = "succesfull";
+            Assert.AreEqual(check, Result);
         }
     }
 }
