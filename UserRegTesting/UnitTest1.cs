@@ -38,15 +38,12 @@ namespace UserRegTesting
             bool result = program.MobileValidation(mobile);
             Assert.AreEqual(true, result);
         }
-<<<<<<< HEAD
-=======
         [TestMethod]
         public void PasswordTest()
         {
-            string password = "Console@123";
+            string password = "Console123";
             bool result = program.PasswordRule(password);
             Assert.AreEqual(true, result);
         }
->>>>>>> UC5_Password_Test
     }
 }
