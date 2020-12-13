@@ -40,5 +40,16 @@ namespace UserRegistration
             bool validate = rg.IsMatch(password);
             return validate;
         }
+        public string CheckMultipleEmail(string Mail1, string Mail2, string Mail3)
+        {
+            RegExValidation Mail = new RegExValidation();
+            bool MailEntry1 = Mail.EmailValidation(Mail1);
+            bool MailEntry2 = Mail.EmailValidation(Mail2);
+            bool MailEntry3 = Mail.EmailValidation(Mail3);
+            if (MailEntry1 && MailEntry2 && MailEntry3)
+                return "succesfull";
+            else
+                return "fail";
+        }
     }
 }
