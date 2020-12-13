@@ -52,7 +52,7 @@ namespace UserRegistration
         }
         public bool PasswordRule(string password)
         {
-            string PasswordPattern = "^(?=.*[A-Z])[a-zA-Z0-9].{8,}$";
+            string PasswordPattern = "^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9].{8,}$";
             Regex rg = new Regex(PasswordPattern);
             bool validate = rg.IsMatch(password);
             return validate;
