@@ -70,7 +70,7 @@ namespace UserRegTesting
             Assert.AreEqual(check, Result);
         }
         [TestMethod]
-        [DataRow("imran")]
+        [DataRow("nijam")]
         public void InvalidName_TrowException(string FirstName)
         {
             try
@@ -83,7 +83,7 @@ namespace UserRegTesting
             }
         }
         [TestMethod]
-        [DataRow("shaikh")]
+        [DataRow("sayyad")]
         public void InvalidLastName_TrowException(string LastName)
         {
             try
